@@ -1,0 +1,9 @@
+* {
+    color:white;
+    background-color: black !important;
+  }
+  
+  #backgroundMenu {
+    background-color: black;
+    border:1px solid #d3d3d3;
+  }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body class="text-center">
+    <div id="backgroundMenu" class="my-2 d-inline-block h-100 w-100">
+        <h1>Blockchain Arcade</h1>
+        <h4>1 ETH is required to play</h4>
+        <h5>It will be deducted if you have enough in your account</h5>
+        <div id="mainMenu" class="d-inline-flex w-100 py-5">
+            <div id="space" class="col-4">
+                <div id="space-list-tab" class="list-group text-center align-items-center" role="tablist">
+                    <button id="list-home-list"
+                        class="list-group-item list-group-item-action h3 bg-transparent text-white"
+                        data-bs-toggle="list" role="tab"
+                        onclick="startSpace(document.getElementById('spaceQuantity').value)">Play Block Dodger</button>
+
+                    <button id="list-home-list"
+                        class="list-group-item list-group-item-action h3 bg-transparent text-white"
+                        data-bs-toggle="list" role="tab" onclick="leaderBoard('Space')">Leaderboard</button>
+
+                    <label for="spaceQuantity">Player Number</label>
+                    <input class="text-dark bg-white" type="number" id="spaceQuantity" name="spaceQuantity" min="1" max="10">
+                </div>
+
+                <div id="spaceLeaderboard" class="list-group d-none text-center align-items-center">
+                    <h2>Leaderboard</h2>
+                    <ol id="spaceLeaderboardList" class="h3"></ol>
+                    <button class="list-group-item list-group-item-action h3 bg-transparent text-white w-100"
+                        onclick="back('Space')">Back to Menu</button>
+                </div>
+            </div>
+            <div id="pacman" class="col-4">
+                <div id="pacman-list-tab" class="list-group text-center align-items-center" role="tablist">
+                    <button id="list-home-list"
+                        class="list-group-item list-group-item-action h3 bg-transparent text-white"
+                        data-bs-toggle="list" role="tab"
+                        onclick="startPacman(document.getElementById('pacmanQuantity').value)">Play Pacman</button>
+
+                    <button id="list-home-list"
+                        class="list-group-item list-group-item-action h3 bg-transparent text-white"
+                        data-bs-toggle="list" role="tab" onclick="leaderBoard('Pacman')">Leaderboard</button>
+
+                    <label for="pacmanQuantity">Player Number</label>
+                    <input class="text-dark bg-white" type="number" id="pacmanQuantity" name="pacmanQuantity" min="1" max="10">
+                </div>
+
+                <div id="pacmanLeaderboard" class="list-group d-none text-center align-items-center">
+                    <h2>Leaderboard</h2>
+                    <ol id="pacmanLeaderboardList" class="h3"></ol>
+                    <button class="list-group-item list-group-item-action h3 bg-transparent text-white w-100"
+                        onclick="back('Pacman')">Back to Menu</button>
+                </div>
+            </div>
+            <div id="snake" class="col-4">
+                <div id="snake-list-tab" class="list-group text-center align-items-center" role="tablist">
+                    <button id="list-home-list"
+                        class="list-group-item list-group-item-action h3 bg-transparent text-white"
+                        data-bs-toggle="list" role="tab"
+                        onclick="startSnake(document.getElementById('snakeQuantity').value)">Play Snake</button>
+
+                    <button id="list-home-list"
+                        class="list-group-item list-group-item-action h3 bg-transparent text-white"
+                        data-bs-toggle="list" role="tab" onclick="leaderBoard('Snake')">Leaderboard</button>
+
+                    <label for="snakeQuantity">Player Number</label>
+                    <input class="text-dark bg-white" type="number" id="snakeQuantity" name="snakeQuantity" min="1" max="10">
+                </div>
+
+                <div id="snakeLeaderboard" class="list-group d-none text-center align-items-center">
+                    <h2>Leaderboard</h2>
+                    <ol id="snakeLeaderboardList" class="h3"></ol>
+                    <button class="list-group-item list-group-item-action h3 bg-transparent text-white w-100"
+                        onclick="back('Snake')">Back to Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
